@@ -36,6 +36,7 @@ dependencies {
     compile 'io.springfox:springfox-swagger-ui:2.+'
     testCompile 'junit:junit:4.+'
     testCompile 'com.jayway.restassured:rest-assured:2.9.+'
+    testCompile "org.springframework.boot:spring-boot-starter-test:1.+"
     runtime 'mysql:mysql-connector-java:5.+'
 }
 
