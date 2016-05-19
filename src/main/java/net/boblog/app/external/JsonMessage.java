@@ -3,11 +3,11 @@ package net.boblog.app.external;
 /**
  * Created by dave on 16/2/13.
  */
-public class JsonMessage {
+public class JsonMessage<T> {
     private boolean result;
     private String message = "";
     private String error = "";
-    private Object data;
+    private T data;
 
     public JsonMessage(boolean result) {
         this.result = result;
@@ -23,7 +23,7 @@ public class JsonMessage {
         this.error = error;
     }
 
-    public JsonMessage(boolean result, String error, String message, Object data) {
+    public JsonMessage(boolean result, String error, String message, T data) {
         this.result = result;
         this.error = error;
         this.message = message;
@@ -54,11 +54,11 @@ public class JsonMessage {
         this.message = message;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 }

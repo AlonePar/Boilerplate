@@ -27,4 +27,8 @@ public class AccountService {
     public Account findByEmail(String email) {
         return repository.findByEmail(email);
     }
+
+    public Account findByPhone(String phone) {
+        return repository.findByPhone(phone);
+    }
 }

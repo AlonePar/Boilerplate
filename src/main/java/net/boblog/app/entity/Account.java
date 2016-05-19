@@ -26,11 +26,19 @@ public class Account implements Serializable {
 
     @Column private String role;
 
+    @Column private String nick;
+
+    @Column private String avatar;
+
     @Column private String lastLoginIp;
 
     @Column private Date LastLoginTime;
 
     @Column private Date createAt;
+
+    public Account() {
+        this.createAt = new Date();
+    }
 
     public static String encryptPassword(String password) {
         return Crypto.encryptBySha1(password);
@@ -82,6 +90,22 @@ public class Account implements Serializable {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public void setNick(String nick) {
+        this.nick = nick;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public String getLastLoginIp() {

@@ -4,6 +4,8 @@ CREATE TABLE `account` (
   `email` varchar(255) DEFAULT NULL,
   `phone` varchar(45) DEFAULT NULL,
   `role` varchar(255) DEFAULT NULL,
+  `nick` varchar(50) DEFAULT NULL,
+  `avatar` varchar(255) DEFAULT NULL,
   `encrypt_password` varchar(255) DEFAULT NULL,
   `last_login_ip` varchar(120) DEFAULT NULL,
   `last_login_time` datetime DEFAULT NULL,
